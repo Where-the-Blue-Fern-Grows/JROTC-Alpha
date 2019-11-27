@@ -10,8 +10,8 @@ sudo apt-get purge -y compiz
 sudo apt-get purge -y gnomine
 sudo apt-get purge -y nmap
 sudo apt-get purge -y mahjongg
-sudo apt-get purge -y rhythmbox
-sudo apt-get purge -y shotwell
+sudo apt-get purge -y rhythmbox*
+sudo apt-get purge -y shotwell*
 sudo apt-get purge -y medusa
 sudo apt-get purge -y john
 sudo apt-get purge -y sqlmap
@@ -25,9 +25,7 @@ sudo apt-get purge -y telnet
 sudo apt-get purge -y tcpdump
 sudo apt-get purge -y cups
 sudo apt-get purge -y postgresql
-sudo apt-get purge -y libwireshark-data
-sudo apt-get purge -y libwireshark3
-sudo apt-get purge -y libwiretap3
+sudo apt-get purge -y libwire*
 sudo apt-get purge -y musescore-soundfont-gm
 Sudo apt-get purge -y postgresql\*
 sudo apt-get update -y
