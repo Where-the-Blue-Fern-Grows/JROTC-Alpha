@@ -29,6 +29,7 @@ sudo chmod 700 //etc/pam.d/common-password
 sudo auditctl -e 1
 
 #configure sysctl.conf
+sudo chmod 702 //etc/sysctl.conf
 #ip spoofing protection
 echo "net.ipv4.conf.default.rp_filter = 1" >> //etc/sysctl.conf
 echo "net.ipv4.conf.all.rp_filter = 1" >> //etc/sysctl.conf
@@ -82,6 +83,7 @@ echo "vm.panic_on_oom = 1" >> //etc/sysctl.conf
 #reboot system 10 seconds after panic
 echo "kernel.panic = 10" >> //etc/sysctl.conf
 #apply new sysctl.conf settings
+sudo chmod 700 //etc/sysctl.conf
 sudo sysctl -p
 
 #ip spoofing
