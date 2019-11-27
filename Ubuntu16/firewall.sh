@@ -1,8 +1,15 @@
+#reset whatever current firewall they might have
+sudo ufw reset --force
+
 #enable the firewall
 sudo ufw enable
 
 #turn on logging for the firewall
 sudo ufw logging on high
+
+#directions and such
+sudo ufw default allow outgoing
+sudo ufw default deny incoming
 
 #deny multiple things
 sudo ufw deny 21
