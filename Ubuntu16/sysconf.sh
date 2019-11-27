@@ -28,8 +28,69 @@ sudo chmod 700 //etc/pam.d/common-password
 #enable auditing
 sudo auditctl -e 1
 
-#dunno what this does
+#configure sysctl.conf
+#ip spoofing protection
+echo "net.ipv4.conf.default.rp_filter = 1" >> //etc/sysctl.conf
+echo "net.ipv4.conf.all.rp_filter = 1" >> //etc/sysctl.conf
+#block syn attacks
+echo "net.ipv4.tcp_syncookies = 1" >> //etc/sysctl.conf
+echo "net.ipv4.tcp_max_syn_backlog = 2048" >> //etc/sysctl.conf
+echo "net.ipv4.tcp_synack_retries = 2" >> //etc/sysctl.conf
+echo "net.ipv4.tcp_syn_retries = 5" >> //etc/sysctl.conf
+#control ip packet forwarding
+echo "net.ipv4.ip_forward = 0" >> //etc/sysctl.conf
+#ignore icmp redirects
+echo "net.ipv4.conf.all.accept_redirects = 0" >> //etc/sysctl.conf
+echo "net.ipv6.conf.all.accept_redirects = 0" >> //etc/sysctl.conf
+echo "net.ipv4.conf.default.accept_redirects = 0" >> //etc/sysctl.conf
+echo "net.ipv6.conf.default.accept_redirects = 0" >> //etc/sysctl.conf
+#ignore send redirects
+echo "net.ipv4.conf.all.send_redirects = 0" >> //etc/sysctl.conf
+echo "net.ipv4.conf.default.send_redirects = 0" >> //etc/sysctl.conf
+#disable source packet routing
+echo "net.ipv4.conf.all.accept_source_route = 0" >> //etc/sysctl.conf
+echo "net.ipv6.conf.all.accept_source_route = 0" >> //etc/sysctl.conf
+echo "net.ipv4.conf.default.accept_source_route = 0" >> //etc/sysctl.conf
+echo "net.ipv6.conf.default.accept_source_route = 0" >> //etc/sysctl.conf
+#log martians
+echo "net.ipv4.conf.all.log_martians = 1" >> //etc/sysctl.conf
+echo "net.ipv4.icmp_ignore_bogus_error_responses = 1" >> //etc/sysctl.conf
+#ignore icmp broadcast requests
+echo "net.ipv4.icmp_echo_ignore_broadcasts = 1" >> //etc/sysctl.conf
+#ignore directed pings
+echo "net.ipv4.icmp_echo_ignore_all = 1" >> //etc/sysctl.conf
+echo "kernel.exec-shield = 1" >> //etc/sysctl.conf
+echo "kernel.randomize_va_space = 1" >> //etc/sysctl.conf
+#disable ipv6 :(
+echo "net.ipv6.conf.all.disable_ipv6 = 1" >> //etc/sysctl.conf
+echo "net.ipv6.conf.default.disable_ipv6 = 1" >> //etc/sysctl.conf
+echo "net.ipv6.conf.lo.disable_ipv6 = 1" >> //etc/sysctl.conf
+#deny redirects
+echo "net.ipv4.conf.all.secure_redirects = 0" >> //etc/sysctl.conf
+#log packets with impossible addresses to kernel log
+echo "net.ipv4.conf.default.secure_redirects = 0" >> //etc/sysctl.conf
+#ipv6 configurations
+echo "net.ipv6.conf.default.router_solicitations = 0" >> //etc/sysctl.conf
+echo "net.ipv6.conf.default.accept_ra_rtr_pref = 0" >> //etc/sysctl.conf
+echo "net.ipv6.conf.default.accept_ra_pinfo = 0" >> //etc/sysctl.conf
+echo "net.ipv6.conf.default.accept_ra_defrtr = 0" >> //etc/sysctl.conf
+echo "net.ipv6.conf.default.autoconf = 0" >> //etc/sysctl.conf
+echo "net.ipv6.conf.default.dad_transmits = 0" >> //etc/sysctl.conf
+echo "net.ipv6.conf.default.max_addresses = 1" >> //etc/sysctl.conf
+#panic when out of memory
+echo "vm.panic_on_oom = 1" >> //etc/sysctl.conf
+#reboot system 10 seconds after panic
+echo "kernel.panic = 10" >> //etc/sysctl.conf
+#apply new sysctl.conf settings
 sudo sysctl -p
 
-#configure sysctl.conf
+
+
+
+
+
+
+
+
+
 
