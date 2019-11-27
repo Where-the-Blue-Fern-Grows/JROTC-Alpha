@@ -2,7 +2,7 @@
 sudo ufw enable
 
 #turn on logging for the firewall
-sudo ufw logging on
+sudo ufw logging on high
 
 #deny multiple things
 sudo ufw deny 21
