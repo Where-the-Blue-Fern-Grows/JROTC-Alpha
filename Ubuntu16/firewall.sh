@@ -19,3 +19,6 @@ sudo ufw deny cups
 #uninstall these services
 sudo apt-get purge -y cups
 sudo apt-get purge -y bluetooth
+
+#cherry on top
+sudo apt-get autoremove -y

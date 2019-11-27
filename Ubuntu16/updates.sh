@@ -31,7 +31,7 @@ sudo apt-get purge -y libwiretap3
 sudo apt-get purge -y musescore-soundfont-gm
 Sudo apt-get purge -y postgresql\*
 sudo apt-get update -y
-sudo apt-get install -y clamav clamav-daemon rkhunter chkrootkit auditd aide aide-common unattended-upgrades thunderbird
+sudo apt-get install -y clamav clamav-daemon rkhunter chkrootkit auditd aide aide-common unattended-upgrades thunderbird tree
 sudo apt-get autoremove -y
 sudo apt-get autoclean -y
 sudo apt-get upgrade -y
