@@ -86,6 +86,7 @@ sudo sysctl -p
 
 #ip spoofing
 sudo chmod 702 //etc/host.conf
+echo "order bind,hosts" >> //etc/host.conf
 echo "nospoof on" >> //etc/host.conf
 sudo chmod 700 //etc/host.conf
 
