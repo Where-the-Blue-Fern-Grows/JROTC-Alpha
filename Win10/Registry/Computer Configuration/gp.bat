@@ -66,4 +66,3 @@ regedit.exe /s %~dp0/WindowsMediaPlayer.reg
 regedit.exe /s %~dp0/WindowsSearch.reg
 regedit.exe /s %~dp0/WindowsStore.reg
 regedit.exe /s %~dp0/WindowsUpdate.reg
-pause
