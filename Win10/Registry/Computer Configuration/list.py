@@ -4,7 +4,6 @@ s = open("gp.bat","a")
 for x in list:
     line = "regedit.exe /s %~dp0/{0}\n".format(x)
     s.write(line)
-s.write("pause")
 s.close()
 with open("gp.bat","r") as f:
     lines = f.readlines()
