@@ -29,4 +29,3 @@ regedit.exe /s %~dp0/Windows-Explorer.reg
 regedit.exe /s %~dp0/Windows.reg
 regedit.exe /s %~dp0/WindowsMediaPlayer.reg
 regedit.exe /s %~dp0/WindowsStore.reg
-pause
