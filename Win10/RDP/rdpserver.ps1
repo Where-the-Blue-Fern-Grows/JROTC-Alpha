@@ -5,4 +5,4 @@ Set-NetFirewallRule -DisplayName "*Remote Desktop*" -Enabled True -Action Allow 
 Set-NetFirewallRule -LocalPort 3389 -Enabled True -Action Allow
 
 #RDP gpedit.msc
-
+~\JROTC-Alpha\Win10\RDP\rdp.bat
