@@ -93,6 +93,136 @@ New-NetFirewallRule -DisplayName "BitTorrent" -LocalPort 6888 -Protocol TCP -Act
 New-NetFirewallRule -DisplayName "BitTorrent" -LocalPort 6888 -Protocol UDP -Action Block -Enabled True
 New-NetFirewallRule -DisplayName "BitTorrent" -LocalPort 6889-6900 -Protocol TCP -Action Block -Enabled True
 New-NetFirewallRule -DisplayName "BitTorrent" -LocalPort 6889-6900 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Windows Live Messenger" -LocalPort 6891-6900 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Windows Live Messenger" -LocalPort 6891-6900 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "BitTorrent" -LocalPort 6901 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "BitTorrent" -LocalPort 6901 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "BitTorrent" -LocalPort 6902-6968 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "BitTorrent" -LocalPort 6902-6968 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "BitTorrent tracker" -LocalPort 6969 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "HTTP Bittorrent" -LocalPort 7000 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Enemy Territory: Quake Wars" -LocalPort 7133 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Tibia" -LocalPort 7171 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "WatchMe" -LocalPort 7272 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "WatchMe" -LocalPort 7272 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Rise: The Vieneo Province" -LocalPort 7473 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Saratoga FTP" -LocalPort 7542 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Saratoga FTP" -LocalPort 7542 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Killing Floor" -LocalPort 7707-7708 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Killing Floor" -LocalPort 7717 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Just Cause 2, Terraria, GTA:SA" -LocalPort 7777 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Just Cause 2, Terraria, GTA:SA" -LocalPort 7777 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Unreal Tournament" -LocalPort 7777-7788 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Unreal Tournament" -LocalPort 7777-7788 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Killing Floor" -LocalPort 8075 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "MapleStory" -LocalPort 8484 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "QBittorrent" -LocalPort 9000 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Tor" -LocalPort 9030 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Tor" -LocalPort 9050-9051 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Clash of Clans" -LocalPort 9339 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Club Penguin" -LocalPort 9875 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "CrossFire" -LocalPort 10009 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "CrossFire" -LocalPort 10009 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Touhou" -LocalPort 10080 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Lock On: Modern Air Combat" -LocalPort 10308 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Lock On: Modern Air Combat" -LocalPort 10308 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "SWAT 4" -LocalPort 10480 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "SWAT 4" -LocalPort 10480 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Farming Simulator 2011" -LocalPort 10823 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Savage: Battle for Newerth" -LocalPort 11235 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Savage: Battle for Newerth" -LocalPort 11235 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "OpenRCT2" -LocalPort 11753 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Audition Online Dance Battle" -LocalPort 12012-12013 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Audition Online Dance Battle" -LocalPort 12012-12013 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Second Life" -LocalPort 12035 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Second Life" -LocalPort 12043 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Second Life" -LocalPort 12046 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Cube World" -LocalPort 12345 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Cube World" -LocalPort 12345 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Second Life" -LocalPort 13000-13050 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "CrossFire (again)" -LocalPort 13008 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "CrossFire (again)" -LocalPort 13008 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Battlefield 1942" -LocalPort 14567 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Battlefield Vietnam" -LocalPort 15567 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "XPilot" -LocalPort 15345 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "XPilot" -LocalPort 15345 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Project Zomboid" -LocalPort 16261 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Project Zomboid" -LocalPort 16261 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Battlefield 2" -LocalPort 16567 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Worms" -LocalPort 17011 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Monero P2P" -LocalPort 18080 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Audition Online Dance Battle" -LocalPort 18200 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Audition Online Dance Battle" -LocalPort 18200 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Audition Online Dance Battle" -LocalPort 18201 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Audition Online Dance Battle" -LocalPort 18201 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Audition Online Dance Battle" -LocalPort 18206 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Audition Online Dance Battle" -LocalPort 18206 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Audition Online Dance Battle" -LocalPort 18300-18301 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Audition Online Dance Battle" -LocalPort 18300-18301 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Audition Online Dance Battle" -LocalPort 18306 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Audition Online Dance Battle" -LocalPort 18306 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Bitcoin" -LocalPort 18333 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Audition Online Dance Battle" -LocalPort 18400-18401 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Audition Online Dance Battle" -LocalPort 18400-18401 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Audition Online Dance Battle" -LocalPort 18505-18506 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Audition Online Dance Battle" -LocalPort 18505-18506 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "X-BEAT" -LocalPort 18605-18606 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "X-BEAT" -LocalPort 18605-18606 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Minecraft: Bedrock Edition" -LocalPort 19132-19133 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Killing Floor" -LocalPort 20560 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Killing Floor" -LocalPort 20560 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "0 A.D. Empires Ascendant" -LocalPort 20595 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Duke Nukem 3D" -LocalPort 23513 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Duke Nukem 3D" -LocalPort 23513 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "StepMania: Online: DDR" -LocalPort 24842 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "StepMania: Online: DDR" -LocalPort 24842 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Minecraft" -LocalPort 25565 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Minecraft" -LocalPort 25565 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Minecraft" -LocalPort 25575 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Quake, EVE Online, Xonotic" -LocalPort 26000 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Quake, EVE Online, Xonotic" -LocalPort 26000 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "EVE Online" -LocalPort 26900-26901 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "QuakeWorld" -LocalPort 27000-27006 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Steam" -LocalPort 27000-27015 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Unturned" -LocalPort 27015-27018 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Steam" -LocalPort 27015-27030 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Steam" -LocalPort 27015-27030 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Magicka" -LocalPort 27016 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Magicka" -LocalPort 27016 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Steam" -LocalPort 27031 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Steam" -LocalPort 27036-27037 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Steam" -LocalPort 27036-27037 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "QuakeWorld" -LocalPort 27500-27900 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Quake II" -LocalPort 27901-27910 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "OpenArena" -LocalPort 27950 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Enemy Territoy, Quake III, Quake Live" -LocalPort 27960-27969 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Starsiege: Tribes" -LocalPort 28001 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Starsiege: Tribes" -LocalPort 28001 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Rust" -LocalPort 28015 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "AssaultCube Reloaded" -LocalPort 28770-28771 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Cube 2: Sauerbraten" -LocalPort 28785-28786 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Killing Floor" -LocalPort 28852 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Killing Floor" -LocalPort 28852 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Nintendo Wi-Fi" -LocalPort 28910 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Nintendo Wi-Fi" -LocalPort 28910 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Call of Duty" -LocalPort 28960 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Call of Duty" -LocalPort 28960 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Perfect World" -LocalPort 29000 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Perfect World" -LocalPort 29000 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Jedi Knight" -LocalPort 29070 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Jedi Knight" -LocalPort 29070 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Nintendo Wi-Fi" -LocalPort 29900-29901 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Nintendo Wi-Fi" -LocalPort 29900-29901 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Nintendo Wi-Fi" -LocalPort 29920 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Nintendo Wi-Fi" -LocalPort 29920 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "TetriNET" -LocalPort 31457 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Ace of Spades" -LocalPort 32887 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Infestation: Survivor Stories" -LocalPort 34000 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Factorio" -LocalPort 34197 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Runescape" -LocalPort 43594-43595 -Protocol TCP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Runescape" -LocalPort 43594-43595 -Protocol UDP -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Mu Online" -LocalPort 44405 -Protocol TCP -Action Block -Enabled True
+
 
 
 
