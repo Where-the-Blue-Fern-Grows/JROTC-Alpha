@@ -1,3 +1,6 @@
+#make sure firewall service is running and configurable
+Set-Service -name MpsSvc -StartupType Automatic -Status Running
+
 #Enable the entire firewall
 Set-NetFirewallProfile -Name Domain,Public,Private -Enabled True
 
