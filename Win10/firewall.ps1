@@ -8,7 +8,7 @@ Set-NetFirewallProfile -DefaultInboundAction Block -DefaultOutboundAction Allow
 Set-NetFirewallProfile -Name Domain,Private,Public -NotifyOnListen False
 
 #Unique Settings for Public
-Set-NetFirewallProfile -Name Public -AllowLocaFirewallRules False -AllowLocalIPsecRules False
+Set-NetFirewallProfile -Name Public -AllowLocalFirewallRules False -AllowLocalIPsecRules False
 
 #Logging for Domain, Private, and Public
 Set-NetFirewallProfile -Name Domain,Private,Public -LogFileName %SystemRoot%\System32\LogFiles\Firewall\pfirewall.log -LogMaxSizeKilobytes 16384 -LogBlocked True -LogAllowed True
