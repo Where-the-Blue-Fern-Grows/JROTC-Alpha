@@ -437,17 +437,22 @@ New-NetFirewallRule -DisplayName "Runescape" -LocalPort 43594-43595 -Protocol TC
 New-NetFirewallRule -DisplayName "Runescape" -LocalPort 43594-43595 -Protocol UDP -Action Block -Enabled True -Direction Outbound
 New-NetFirewallRule -DisplayName "Mu Online" -LocalPort 44405 -Protocol TCP -Action Block -Enabled True -Direction Outbound
 
-
-
-
-
 #Block multiple protocols with new rule
+New-NetFirewallRule -DisplayName "ICMPv4" -Protocol ICMPv4 -Action Block -Enabled True -Direction Inbound -Profile Any
+New-NetFirewallRule -DisplayName "ICMPv4" -Protocol ICMPv4 -Action Block -Enabled True -Direction Outbound -Profile Any
+New-NetFirewallRule -DisplayName "ICMPv6" -Protocol ICMPv6 -Action Block -Enabled True -Direction Inbound -Profile Any
+New-NetFirewallRule -DisplayName "ICMPv6" -Protocol ICMPv6 -Action Block -Enabled True -Direction Outbound -Profile Any
+HTTP
+Telnet
+SSH
+RDP
+IPv6
+FTP
 
 #Allow multiple ports with new rule
+HTTPS
+NTP
+IPv4
 
 #Allow multiple features with pre-existing rules
-
-#(Optional)Allow multiple ports with new rule by choice
-
-#(Optional)Block multiple Remote Windows features by pre-existing rules
-
+Set-NetFirewallRule -DisplayName "*Defender*" -Enabled True -Action Allow -Profile Any
