@@ -10,6 +10,7 @@ Set-NetFirewallRule -DisplayName "*IPv6*","*ICMP*","*SMB*","*UPnP*","*FTP*","*Te
 
 #Block multiple ports with new rule
 New-NetFirewallRule -DisplayName "FTP, SSH, Telnet" -LocalPort 20-23 -Protocol TCP -Action Block -Enabled True -Direction Inbound
+New-NetFirewallRule -DisplayName "HTTP" -LocalPort 80 -Protocol TCP -Action Block -Enabled True -Direction Inbound
 New-NetFirewallRule -DisplayName "TorPark onion routing" -LocalPort 81 -Protocol TCP -Action Block -Enabled True -Direction Inbound
 New-NetFirewallRule -DisplayName "TorPark control" -LocalPort 82 -Protocol UDP -Action Block -Enabled True -Direction Inbound
 New-NetFirewallRule -DisplayName "RTelnet" -LocalPort 107 -Protocol TCP -Action Block -Enabled True -Direction Inbound
@@ -53,6 +54,8 @@ New-NetFirewallRule -DisplayName "Xbox LIVE" -LocalPort 3074 -Protocol TCP -Acti
 New-NetFirewallRule -DisplayName "Xbox LIVE" -LocalPort 3074 -Protocol UDP -Action Block -Enabled True -Direction Inbound
 New-NetFirewallRule -DisplayName "iSCSI" -LocalPort 3260 -Protocol TCP -Action Block -Enabled True -Direction Inbound
 New-NetFirewallRule -DisplayName "iSCSI" -LocalPort 3260 -Protocol UDP -Action Block -Enabled True -Direction Inbound
+New-NetFirewallRule -DisplayName "RDP" -LocalPort 3389 -Protocol TCP -Action Block -Enabled True -Direction Inbound
+New-NetFirewallRule -DisplayName "RDP" -LocalPort 3389 -Protocol UDP -Action Block -Enabled True -Direction Inbound
 New-NetFirewallRule -DisplayName "PlayStation" -LocalPort 3479-3480 -Protocol TCP -Action Block -Enabled True -Direction Inbound
 New-NetFirewallRule -DisplayName "PlayStation" -LocalPort 3479-3480 -Protocol UDP -Action Block -Enabled True -Direction Inbound
 New-NetFirewallRule -DisplayName "Cyc" -LocalPort 3645 -Protocol TCP -Action Block -Enabled True -Direction Inbound
@@ -224,6 +227,7 @@ New-NetFirewallRule -DisplayName "Runescape" -LocalPort 43594-43595 -Protocol UD
 New-NetFirewallRule -DisplayName "Mu Online" -LocalPort 44405 -Protocol TCP -Action Block -Enabled True -Direction Inbound
 
 New-NetFirewallRule -DisplayName "FTP, SSH, Telnet" -LocalPort 20-23 -Protocol TCP -Action Block -Enabled True -Direction Outbound
+New-NetFirewallRule -DisplayName "HTTP" -LocalPort 80 -Protocol TCP -Action Block -Enabled True -Direction Outbound
 New-NetFirewallRule -DisplayName "TorPark onion routing" -LocalPort 81 -Protocol TCP -Action Block -Enabled True -Direction Outbound
 New-NetFirewallRule -DisplayName "TorPark control" -LocalPort 82 -Protocol UDP -Action Block -Enabled True -Direction Outbound
 New-NetFirewallRule -DisplayName "RTelnet" -LocalPort 107 -Protocol TCP -Action Block -Enabled True -Direction Outbound
@@ -267,6 +271,8 @@ New-NetFirewallRule -DisplayName "Xbox LIVE" -LocalPort 3074 -Protocol TCP -Acti
 New-NetFirewallRule -DisplayName "Xbox LIVE" -LocalPort 3074 -Protocol UDP -Action Block -Enabled True -Direction Outbound
 New-NetFirewallRule -DisplayName "iSCSI" -LocalPort 3260 -Protocol TCP -Action Block -Enabled True -Direction Outbound
 New-NetFirewallRule -DisplayName "iSCSI" -LocalPort 3260 -Protocol UDP -Action Block -Enabled True -Direction Outbound
+New-NetFirewallRule -DisplayName "RDP" -LocalPort 3389 -Protocol TCP -Action Block -Enabled True -Direction Outbound
+New-NetFirewallRule -DisplayName "RDP" -LocalPort 3389 -Protocol UDP -Action Block -Enabled True -Direction Outbound
 New-NetFirewallRule -DisplayName "PlayStation" -LocalPort 3479-3480 -Protocol TCP -Action Block -Enabled True -Direction Outbound
 New-NetFirewallRule -DisplayName "PlayStation" -LocalPort 3479-3480 -Protocol UDP -Action Block -Enabled True -Direction Outbound
 New-NetFirewallRule -DisplayName "Cyc" -LocalPort 3645 -Protocol TCP -Action Block -Enabled True -Direction Outbound
@@ -442,17 +448,11 @@ New-NetFirewallRule -DisplayName "ICMPv4" -Protocol ICMPv4 -Action Block -Enable
 New-NetFirewallRule -DisplayName "ICMPv4" -Protocol ICMPv4 -Action Block -Enabled True -Direction Outbound -Profile Any
 New-NetFirewallRule -DisplayName "ICMPv6" -Protocol ICMPv6 -Action Block -Enabled True -Direction Inbound -Profile Any
 New-NetFirewallRule -DisplayName "ICMPv6" -Protocol ICMPv6 -Action Block -Enabled True -Direction Outbound -Profile Any
-HTTP
-Telnet
-SSH
-RDP
-IPv6
-FTP
 
 #Allow multiple ports with new rule
-HTTPS
-NTP
-IPv4
+New-NetFirewallRule -DisplayName "HTTPS" -LocalPort 443 -Protocol TCP -Action Allow -Enabled True -Direction Outbound
+New-NetFirewallRule -DisplayName "NTP" -LocalPort 123 -Protocol UDP -Action Allow -Enabled True -Direction Outbound
+New-NetFirewallRule -DisplayName "NTP" -LocalPort 123 -Protocol UDP -Action Allow -Enabled True -Direction Inbound
 
 #Allow multiple features with pre-existing rules
 Set-NetFirewallRule -DisplayName "*Defender*" -Enabled True -Action Allow -Profile Any
