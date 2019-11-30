@@ -39,6 +39,17 @@ Set-Service -Status Stopped -StartupType Disabled -Name XblAuthManager
 Set-Service -Status Stopped -StartupType Disabled -Name XblGameSave
 Set-Service -Status Stopped -StartupType Disabled -Name XboxGipSvc
 Set-Service -Status Stopped -StartupType Disabled -Name XboxNetApiSvc
+Set-Service -Status Stopped -StartupType Disabled -Name CertPropSvc
+Set-Service -Status Stopped -StartupType Disabled -Name DiagTrack
+Set-Service -Status Stopped -StartupType Disabled -Name PimIndexMaintenanceSvc_21920
+Set-Service -Status Stopped -StartupType Disabled -Name VaultSvc
+Set-Service -Status Stopped -StartupType Disabled -Name DcpSvc
+Set-Service -Status Stopped -StartupType Disabled -Name fdPHost
+Set-Service -Status Stopped -StartupType Disabled -Name FDResPub
+Set-Service -Status Stopped -StartupType Disabled -Name vmicguestinterface
+Set-Service -Status Stopped -StartupType Disabled -Name vmicshutdown
+Set-Service -Status Stopped -StartupType Disabled -Name Spooler
+Set-Service -Status Stopped -StartupType Disabled -Name iphlpsvc
 
 #Enable needed services
 Set-Service -Status Running -StartupType Automatic -Name BDESVC
@@ -58,3 +69,8 @@ Set-Service -Status Running -StartupType Automatic -Name LanmanServer
 Set-Service -Status Running -StartupType Automatic -Name Appinfo
 Set-Service -Status Running -StartupType Automatic -Name AppMgmt
 Set-Service -Status Running -StartupType Automatic -Name BFE
+Set-Service -Status Running -StartupType Automatic -Name CoreMessagingRegistrar
+Set-Service -Status Running -StartupType Automatic -Name DPS
+Set-Service -Status Running -StartupType Automatic -Name EFS
+Set-Service -Status Running -StartupType Automatic -Name gpsvc
+Set-Service -Status Running -StartupType Automatic -Name IKEEXT
