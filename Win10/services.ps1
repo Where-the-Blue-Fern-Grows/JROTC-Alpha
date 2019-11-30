@@ -24,7 +24,6 @@ Set-Service -Status Stopped -StartupType Disabled -Name RpcLocator
 Set-Service -Status Stopped -StartupType Disabled -Name RpcSs
 Set-Service -Status Stopped -StartupType Disabled -Name RemoteRegistry
 Set-Service -Status Stopped -StartupType Disabled -Name RemoteAccess
-Set-Service -Status Stopped -StartupType Disabled -Name LanmanServer
 Set-Service -Status Stopped -StartupType Disabled -Name SNMPTRAP
 Set-Service -Status Stopped -StartupType Disabled -Name SSDPSRV
 Set-Service -Status Stopped -StartupType Disabled -Name upnphost
@@ -55,3 +54,4 @@ Set-Service -Status Running -StartupType Automatic -Name WinDefend
 Set-Service -Status Running -StartupType Automatic -Name SecurityHealthService
 Set-Service -Status Running -StartupType Automatic -Name MpsSvc
 Set-Service -Status Running -StartupType Automatic -Name wuauserv
+Set-Service -Status Running -StartupType Automatic -Name LanmanServer
