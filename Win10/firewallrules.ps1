@@ -9,9 +9,9 @@ Set-NetFirewallRule -DisplayGroup "AllJoyn Router","*BranchCache*","Cast to Devi
 Set-NetFirewallRule -DisplayName "*IPv6*","*ICMP*","*SMB*","*UPnP*","*FTP*","*Telnet*" -Action Block -Enabled True -Profile Any
 
 #Block multiple ports with new rule
-New-NetFirewallRule -DisplayName "FTP, SSH, Telnet" -LocalPort 20 -Protocol TCP -Action Block -Enabled True -Direction Inbound
-New-NetFirewallRule -DisplayName "FTP, SSH, Telnet" -LocalPort 21 -Protocol TCP -Action Block -Enabled True -Direction Inbound
-New-NetFirewallRule -DisplayName "FTP, SSH, Telnet" -LocalPort 22-23 -Protocol TCP -Action Block -Enabled True -Direction Inbound
+New-NetFirewallRule -DisplayName "FTP, SSH, Telnet" -LocalPort 20-21 -Protocol TCP -Action Block -Enabled True -Direction Inbound
+New-NetFirewallRule -DisplayName "FTP, SSH, Telnet" -LocalPort 22 -Protocol TCP -Action Block -Enabled True -Direction Inbound
+New-NetFirewallRule -DisplayName "FTP, SSH, Telnet" -LocalPort 23 -Protocol TCP -Action Block -Enabled True -Direction Inbound
 New-NetFirewallRule -DisplayName "HTTP" -LocalPort 80 -Protocol TCP -Action Block -Enabled True -Direction Inbound
 New-NetFirewallRule -DisplayName "TorPark onion routing" -LocalPort 81 -Protocol TCP -Action Block -Enabled True -Direction Inbound
 New-NetFirewallRule -DisplayName "TorPark control" -LocalPort 82 -Protocol UDP -Action Block -Enabled True -Direction Inbound
@@ -228,9 +228,9 @@ New-NetFirewallRule -DisplayName "Runescape" -LocalPort 43594-43595 -Protocol TC
 New-NetFirewallRule -DisplayName "Runescape" -LocalPort 43594-43595 -Protocol UDP -Action Block -Enabled True -Direction Inbound
 New-NetFirewallRule -DisplayName "Mu Online" -LocalPort 44405 -Protocol TCP -Action Block -Enabled True -Direction Inbound
 
-New-NetFirewallRule -DisplayName "FTP, SSH, Telnet" -LocalPort 20 -Protocol TCP -Action Block -Enabled True -Direction Outbound
-New-NetFirewallRule -DisplayName "FTP, SSH, Telnet" -LocalPort 21 -Protocol TCP -Action Block -Enabled True -Direction Outbound
-New-NetFirewallRule -DisplayName "FTP, SSH, Telnet" -LocalPort 22-23 -Protocol TCP -Action Block -Enabled True -Direction Outbound
+New-NetFirewallRule -DisplayName "FTP, SSH, Telnet" -LocalPort 20-21 -Protocol TCP -Action Block -Enabled True -Direction Outbound
+New-NetFirewallRule -DisplayName "FTP, SSH, Telnet" -LocalPort 22 -Protocol TCP -Action Block -Enabled True -Direction Outbound
+New-NetFirewallRule -DisplayName "FTP, SSH, Telnet" -LocalPort 23 -Protocol TCP -Action Block -Enabled True -Direction Outbound
 New-NetFirewallRule -DisplayName "HTTP" -LocalPort 80 -Protocol TCP -Action Block -Enabled True -Direction Outbound
 New-NetFirewallRule -DisplayName "TorPark onion routing" -LocalPort 81 -Protocol TCP -Action Block -Enabled True -Direction Outbound
 New-NetFirewallRule -DisplayName "TorPark control" -LocalPort 82 -Protocol UDP -Action Block -Enabled True -Direction Outbound
