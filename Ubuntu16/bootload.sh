@@ -11,3 +11,6 @@ echo "set superusers="root"" >> //etc/grub.d/00_header
 echo "password pbkdf2 root " >> //etc/grub.d/00_header
 file1=`cat grub.txt`
 cat grub.txt | sed -i '$Ps/$/'"$file1"'/}' //etc/grub.d/00_header
+echo "EOF" >> //etc/grub.d/00_header
+sudo chmod 700 //etc/grub.d/00_header
+sudo update-grub
