@@ -18,3 +18,5 @@ sudo update-grub
 sudo chmod 777 //etc/default/grub
 sed -i 's/apparmor=0//' //etc/default/grub
 sudo chmod 700 //etc/default/grub
+
+aa-enforce //etc/apparmor.d/*
