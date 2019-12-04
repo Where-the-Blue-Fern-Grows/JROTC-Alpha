@@ -135,4 +135,27 @@ echo "fs.suid_dumpable = 0" >> //etc/sysctl.conf
 sudo chmod 700 //etc/sysctl.conf
 sudo sysctl -w fs.suid_dumpable=0
 
+#config motd
+sudo chmod 777 //etc/motd
+echo "This system is for authorized users only. Individual use of this system and/or network without authority, or in excess of your authority, is strictly prohibited." > //etc/motd
+sudo chmod 700 //etc/motd
+sudo chmod 777 //etc/issue
+echo "This system is for the use of authorized users only.  Individuals using this computer system without authority, or in excess of their authority, are subject to having all of their activities on this system monitored and recorded by system personnel.  In the course of monitoring individuals improperly using this system, or in the course of system maintenance, the activities of authorized users may also be monitored.  Anyone using this system expressly consents to such monitoring and is advised that if such monitoring reveals possible evidence of criminal activity, system personnel may provide the evidence of such monitoring to law enforcement officials." > //etc/issue
+sudo chmod 700 //etc/issue
+sudo chmod 777 //etc/issue.net
+echo "This system is for the use of authorized users only.  Individuals using this computer system without authority, or in excess of their authority, are subject to having all of their activities on this system monitored and recorded by system personnel.  In the course of monitoring individuals improperly using this system, or in the course of system maintenance, the activities of authorized users may also be monitored.  Anyone using this system expressly consents to such monitoring and is advised that if such monitoring reveals possible evidence of criminal activity, system personnel may provide the evidence of such monitoring to law enforcement officials." > //etc/issue.net
+sudo chmod 700 //etc/issue.net
+touch //etc/dconf/profile/gdm
+sudo chmod 777 //etc/dconf/profile/gdm
+echo "user-db:user" >> //etc/dconf/profile/gdm
+echo "system-db:gdm" >> //etc/dconf/profile/gdm
+echo "file-db:/usr/share/gdm/greeter-dconf/defaults" >> //etc/dconf/profile/gdm
+sudo chmod 700 //etc/dconf/profile/gdm
+
+
+
+
+
+
+
 
