@@ -14,3 +14,7 @@ cat grub.txt | sed -i '$Ps/$/'"$file1"'/}' //etc/grub.d/00_header
 echo "EOF" >> //etc/grub.d/00_header
 sudo chmod 700 //etc/grub.d/00_header
 sudo update-grub
+
+sudo chmod 777 //etc/default/grub
+sed -i 's/apparmor=0//' //etc/default/grub
+sudo chmod 700 //etc/default/grub
