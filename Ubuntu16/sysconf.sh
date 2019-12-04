@@ -83,3 +83,14 @@ sudo chmod 702 //etc/host.conf
 echo "order bind,hosts" >> //etc/host.conf
 echo "nospoof on" >> //etc/host.conf
 sudo chmod 700 //etc/host.conf
+
+#restrict core dumps
+sudo chmod 702 //etc/security/limits.conf
+echo "* hard core" >> //etc/security/limits.conf
+sudo chmod 700 //etc/security/limits.conf
+sudo chmod 702 //etc/sysctl.conf
+echo "fs.suid_dumpable = 0" >> //etc/sysctl.conf
+sudo chmod 700 //etc/sysctl.conf
+sudo sysctl -w fs.suid_dumpable=0
+
+
