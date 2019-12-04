@@ -39,7 +39,7 @@ sudo apt-get purge -y rsh-redone-client
 sudo apt-get purge -y talk
 sudo apt-get purge -y ldap-utils
 sudo apt-get update -y
-sudo apt-get install -y clamav clamav-daemon rkhunter chkrootkit auditd aide aide-common unattended-upgrades thunderbird tree
+sudo apt-get install -y clamav clamav-daemon rkhunter chkrootkit auditd aide aide-common unattended-upgrades thunderbird tree apparmor ntp tcpd iptables rsyslog
 sudo apt-get autoremove -y
 sudo apt-get autoclean -y
 sudo apt-get upgrade -y
