@@ -70,6 +70,14 @@ echo "net.ipv6.conf.default.accept_ra_defrtr = 0" >> //etc/sysctl.conf
 echo "net.ipv6.conf.default.autoconf = 0" >> //etc/sysctl.conf
 echo "net.ipv6.conf.default.dad_transmits = 0" >> //etc/sysctl.conf
 echo "net.ipv6.conf.default.max_addresses = 1" >> //etc/sysctl.conf
+echo "net.ipv4.conf.all.send redirects = 0" >> //etc/sysctl.conf
+echo "net.ipv4.conf.all.accept redirects = 0" >> //etc/sysctl.conf
+echo "net.ipv4.conf.all.secure redirects = 0" >> //etc/sysctl.conf
+echo "net.ipv4.conf.all.log martians = 1" >> //etc/sysctl.conf
+echo "net.ipv4.conf.all.rp filter = 1" >> //etc/sysctl.conf
+echo "net.ipv6.conf.all.accept ra = 0" >> //etc/sysctl.conf
+echo "net.ipv6.conf.default.accept_ra = 0" >> //etc/sysctl.conf
+echo "net.ipv6.conf.all.accept redirects = 0" >> //etc/sysctl.conf
 #panic when out of memory
 echo "vm.panic_on_oom = 1" >> //etc/sysctl.conf
 #reboot system 10 seconds after panic
@@ -77,6 +85,40 @@ echo "kernel.panic = 10" >> //etc/sysctl.conf
 #apply new sysctl.conf settings
 sudo chmod 700 //etc/sysctl.conf
 sudo sysctl -p
+#do the thing
+sudo sysctl -w net.ipv4.ip forward=0
+sudo sysctl -w net.ipv4.route.flush=1
+sudo sysctl -w net.ipv4.conf.all.send_redirects=0
+sudo sysctl -w net.ipv4.conf.default.send redirects=0
+sudo sysctl -w net.ipv4.route.flush=1
+sudo sysctl -w net.ipv4.conf.all.accept_source_route=0
+sudo sysctl -w net.ipv4.conf.default.accept source route=0
+sudo sysctl -w net.ipv4.route.flush=1
+sudo sysctl -w net.ipv4.conf.all.accept_redirects=0
+sudo sysctl -w net.ipv4.conf.default.accept redirects=0
+sudo sysctl -w net.ipv4.route.flush=1
+sudo sysctl -w net.ipv4.conf.all.secure_redirects=0
+sudo sysctl -w net.ipv4.conf.default.secure_redirects=0
+sudo sysctl -w net.ipv4.route.flush=1
+sudo sysctl -w net.ipv4.conf.all.log_martians=1
+sudo sysctl -w net.ipv4.conf.default.log martians=1
+sudo sysctl -w net.ipv4.route.flush=1
+sudo sysctl -w net.ipv4.icmp echo ignore broadcasts=1
+sudo sysctl -w net.ipv4.route.flush=1
+sudo sysctl -w net.ipv4.icmp_ignore_bogus_error_responses=1
+sudo sysctl -w net.ipv4.route.flush=1
+sudo sysctl -w net.ipv4.conf.all.rp_filter=1
+sudo sysctl -w net.ipv4.conf.default.rp filter=1
+sudo sysctl -w net.ipv4.route.flush=1
+sudo sysctl -w net.ipv4.tcp syncookies=1
+sudo sysctl -w net.ipv4.route.flush=1
+sudo sysctl -w net.ipv6.conf.all.accept_ra=0
+sudo sysctl -w net.ipv6.conf.default.accept ra=0
+sudo sysctl -w net.ipv6.route.flush=1
+sudo sysctl -w net.ipv6.conf.all.accept_redirects=0
+sudo sysctl -w net.ipv6.conf.default.accept redirects=0
+sudo sysctl -w net.ipv6.route.flush=1
+
 
 #ip spoofing
 sudo chmod 702 //etc/host.conf
