@@ -7,7 +7,6 @@ sudo apt-get purge -y apache2-data
 sudo apt-get purge -y wireshark-common
 sudo apt-get purge -y totem
 sudo apt-get purge -y cheese
-sudo apt-get purge -y gnomine
 sudo apt-get purge -y nmap
 sudo apt-get purge -y mahjongg
 sudo apt-get purge -y rhythmbox*
