@@ -260,10 +260,26 @@ sudo chmod -R g-wx,o-rwx //var/log/*
 
 systemctl enable cron
 
-
 #disable IPv6
 sudo chmod 777 //etc/default/grub
 echo "GRUB_CMDLINE_LINUX="ipv6.disable=1"" >> //etc/default/grub
 echo "GRUB_CMDLINE_LINUX="audit=1"" >> //etc/default/grub
 sudo chmod 700 //etc/default/grub
 update-grub
+
+#user stuff
+sudo useradd -D -f 30
+sudo usermod -g 0 root
+sudo chmod 777 //etc/bash.bashrc
+echo "umask 027" >> //etc/bash.bashrc
+sudo chmod 700 //etc/bash.bashrc
+sudo chmod 777 //etc/profile
+echo "umask027" >> //etc/profile
+echo "TMOUT=600" >> //etc/profile
+sudo chmod 700 //etc/profile
+sudo chmod 777 //etc/profile.d/*.sh
+echo "umask 027" >> //etc/profile.d/*.sh
+sudo chmod 700 //etc/profile.d/*.sh
+sudo chmod 777 //etc/bashrc
+echo "TMOUT=600" >> //etc/bashrc
+sudo chmod 700 //etc/bashrc
