@@ -1,5 +1,6 @@
 sudo fuser -k //var/lib/dpkg/lock-frontend
 prelink -ua
+sudo apt-get update -y
 sudo apt-get purge -y wireshark
 sudo apt-get purge -y apache2
 sudo apt-get purge -y apache2-bin
