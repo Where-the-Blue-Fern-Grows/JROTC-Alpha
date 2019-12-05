@@ -46,3 +46,10 @@ sudo apt-get upgrade -y
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo dpkg-reconfigure -plow unattended-upgrades
+sudo freshclam
+sudo chkrootkit
+cd //usr/local/src
+sudo wget http://www.rfxn.com/downloads/maldetect-current.tar.gz
+sudo tar -xzf maldetect-current.tar.gz
+cd maldetect-*
+sudo sh ./install.sh
