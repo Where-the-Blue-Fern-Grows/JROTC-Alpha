@@ -199,4 +199,9 @@ echo "max_log_file_action = keep_logs" >> //etc/audit/auditd.conf
 sudo chmod 700 //etc/audit/auditd.conf
 systemctl reload auditd
 
-
+#disable IPv6
+sudo chmod 777 //etc/default/grub
+echo "GRUB_CMDLINE_LINUX="ipv6.disable=1"" >> //etc/default/grub
+echo "GRUB_CMDLINE_LINUX="audit=1"" >> //etc/default/grub
+sudo chmod 700 //etc/default/grub
+update-grub
