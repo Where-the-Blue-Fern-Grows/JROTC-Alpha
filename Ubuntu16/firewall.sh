@@ -22,3 +22,19 @@ sudo apt-get purge -y bluetooth
 
 #cherry on top
 sudo apt-get autoremove -y
+
+#Config default deny
+sudo iptables -P INPUT DROP
+sudo iptables -P OUTPUT DROP
+sudo iptables -P FORWARD DROP
+#loopback traffic
+sudo iptables -A INPUT -i lo -j ACCEPT
+sudo iptables -A OUTPUT -o lo -j ACCEPT
+sudo iptables -A INPUT -s 127.0.0.0/8 -j DROP
+#outbound and established connections
+sudo iptables -A OUTPUT -p tcp -m state --state NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A OUTPUT -p udp -m state --state NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A OUTPUT -p icmp -m state --state NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp -m state --state ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p udp -m state --state ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p icmp -m state --state ESTABLISHED -j ACCEPT
