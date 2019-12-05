@@ -120,6 +120,23 @@ sudo sysctl -w net.ipv6.conf.all.accept_redirects=0
 sudo sysctl -w net.ipv6.conf.default.accept redirects=0
 sudo sysctl -w net.ipv6.route.flush=1
 sudo sysctl -w kernel.randomize_va_space=2
+systemctl disable avahi-daemon
+systemctl disable cups
+systemctl disable isc-dhcp-server
+systemctl disable isc-dhcp-server6
+systemctl disable slapd
+systemctl disable nfs-server
+systemctl disable rpcbind
+systemctl disable bind9
+systemctl disable vsftpd
+systemctl disable apache2
+systemctl disable dovecot
+systemctl disable smbd
+systemctl disable squid
+systemctl disable snmpd
+systemctl disable rsync
+systemctl disable nis
+
 
 #ip spoofing
 sudo chmod 702 //etc/host.conf
@@ -153,8 +170,16 @@ echo "system-db:gdm" >> //etc/dconf/profile/gdm
 echo "file-db:/usr/share/gdm/greeter-dconf/defaults" >> //etc/dconf/profile/gdm
 sudo chmod 700 //etc/dconf/profile/gdm
 
+#Configure ntp
+sudo chmod 777 //etc/ntp.conf
+echo "restrict -4 default kod nomodify notrap nopeer noquery" >> //etc/ntp.conf
+echo "restrict -6 default kod nomodify notrap nopeer noquery" >> //etc/ntp.conf
+sudo chmod 700 //etc/ntp.conf
 
-
+#Config hosts.deny
+sudo chmod 777 //etc/hosts.deny
+echo "ALL: ALL" >> //etc/hosts.deny
+sudo chmod 700 //etc/hosts.deny
 
 
 
