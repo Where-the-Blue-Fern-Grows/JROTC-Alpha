@@ -244,14 +244,21 @@ echo "-w /sbin/rmmod -p x -k modules" >> //etc/audit/audit.rules
 echo "-w /sbin/modprobe -p x -k modules" >> //etc/audit/audit.rules
 echo "-a always,exit -F arch=b64 -S init_module -S delete_module -k modules" >> //etc/audit/audit.rules
 sudo chmod 700 //etc/audit/auditd.conf
-
 sudo chmod 777 //etc/audit/.rules
 echo "-e 2" >> //etc/audit/.rules
 sudo chmod 700 //etc/audit/.rules
 
+#rsyslog
+systemctl enable rsyslog
+sudo chmod 777 //etc/rsyslog.conf
+echo "$FileCreateMode 0640" >> //etc/rsyslog.conf
+sudo chmod 700 //etc/rsyslog.conf
+sudo chmod 777 //etc/rsyslog.d/*.conf
+echo "$FileCreateMode 0640" >> //etc/rsyslog.d/*.conf
+sudo chmod 700 //etc/rsyslog.d/*.conf
+sudo chmod -R g-wx,o-rwx //var/log/*
 
-
-
+systemctl enable cron
 
 
 #disable IPv6
