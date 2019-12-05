@@ -181,7 +181,13 @@ sudo chmod 777 //etc/hosts.deny
 echo "ALL: ALL" >> //etc/hosts.deny
 sudo chmod 700 //etc/hosts.deny
 
-
+#Disable DCCP
+sudo chmod 777 //etc/modprobe.d/CIS.conf
+echo "install dccp /bin/true" >> //etc/modprobe.d/CIS.conf
+echo "install sctp /bin/true" >> //etc/modprobe.d/CIS.conf
+echo "install rds /bin/true" >> //etc/modprobe.d/CIS.conf
+echo "install tipc /bin/true" >> //etc/modprobe.d/CIS.conf
+sudo chmod 700 //etc/modprobe.d/CIS.conf
 
 
 
