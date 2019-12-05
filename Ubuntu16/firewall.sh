@@ -1,5 +1,5 @@
 #reset whatever current firewall they might have
-sudo ufw reset --force
+echo -e "y" | sudo ufw reset --force
 
 #enable the firewall
 sudo ufw enable
