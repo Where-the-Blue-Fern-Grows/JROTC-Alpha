@@ -78,6 +78,7 @@ echo "net.ipv4.conf.all.rp filter = 1" >> //etc/sysctl.conf
 echo "net.ipv6.conf.all.accept ra = 0" >> //etc/sysctl.conf
 echo "net.ipv6.conf.default.accept_ra = 0" >> //etc/sysctl.conf
 echo "net.ipv6.conf.all.accept redirects = 0" >> //etc/sysctl.conf
+echo "kernel.randomize_va_space = 2" >> //etc/sysctl.conf
 #panic when out of memory
 echo "vm.panic_on_oom = 1" >> //etc/sysctl.conf
 #reboot system 10 seconds after panic
@@ -118,7 +119,7 @@ sudo sysctl -w net.ipv6.route.flush=1
 sudo sysctl -w net.ipv6.conf.all.accept_redirects=0
 sudo sysctl -w net.ipv6.conf.default.accept redirects=0
 sudo sysctl -w net.ipv6.route.flush=1
-
+sudo sysctl -w kernel.randomize_va_space=2
 
 #ip spoofing
 sudo chmod 702 //etc/host.conf
