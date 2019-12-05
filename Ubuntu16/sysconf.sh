@@ -189,5 +189,14 @@ echo "install rds /bin/true" >> //etc/modprobe.d/CIS.conf
 echo "install tipc /bin/true" >> //etc/modprobe.d/CIS.conf
 sudo chmod 700 //etc/modprobe.d/CIS.conf
 
+#auditing
+sudo chmod 777 //etc/audit/auditd.conf
+echo "max_log_file = 16384" >> //etc/audit/auditd.conf
+echo "space_left_action = email" >> //etc/audit/auditd.conf
+echo "action mail acct = root" >> //etc/audit/auditd.conf
+echo "admin_space_left_action = halt" >> //etc/audit/auditd.conf
+echo "max_log_file_action = keep_logs" >> //etc/audit/auditd.conf
+sudo chmod 700 //etc/audit/auditd.conf
+systemctl reload auditd
 
 
