@@ -1,4 +1,3 @@
-echo -e "JROTC$$cp18alpha\nJROTC$$cp18alpha" | grub-mkpasswd-pbkdf2 > grub.txt
 sed -i 's/Enter password: //' grub.txt
 sed -i 's/Reenter password: //' grub.txt
 sed -i 's/PBKDF2 hash of your password is //' grub.txt
