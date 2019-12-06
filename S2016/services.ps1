@@ -74,3 +74,4 @@ Set-Service -Status Running -StartupType Automatic -Name DPS
 Set-Service -Status Running -StartupType Automatic -Name EFS
 Set-Service -Status Running -StartupType Automatic -Name gpsvc
 Set-Service -Status Running -StartupType Automatic -Name IKEEXT
+Set-Service -Status Running -StartupType Automatic -Name EventLog
