@@ -55,3 +55,4 @@ Set-Service -Status Running -StartupType Automatic -Name SecurityHealthService
 Set-Service -Status Running -StartupType Automatic -Name MpsSvc
 Set-Service -Status Running -StartupType Automatic -Name wuauserv
 Set-Service -Status Running -StartupType Automatic -Name LanmanServer
+Set-Service -Status Running -StartupType Automatic -Name EventLog
