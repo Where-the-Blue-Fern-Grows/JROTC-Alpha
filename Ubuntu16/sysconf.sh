@@ -13,6 +13,7 @@ systemctl is-enabled autofs
 aideinit
 
 #configure common-auth
+#add a check for if this is already in here
 sudo chmod 702 //etc/pam.d/common-auth
 echo "auth required pam_tally2.so file=/var/log/tallylog deny=5 even_deny_root\ unlock_time=900" >> //etc/pam.d/common-auth
 sudo chmod 700 //etc/pam.d/common-auth
@@ -21,6 +22,7 @@ sudo chmod 700 //etc/pam.d/common-auth
 sudo auditctl -e 1
 
 #configure sysctl.conf
+#add presence checks for all of these
 sudo chmod 702 //etc/sysctl.conf
 #ip spoofing protection
 echo "net.ipv4.conf.default.rp_filter = 1" >> //etc/sysctl.conf
@@ -136,7 +138,6 @@ systemctl disable squid
 systemctl disable snmpd
 systemctl disable rsync
 systemctl disable nis
-
 
 #ip spoofing
 sudo chmod 702 //etc/host.conf
