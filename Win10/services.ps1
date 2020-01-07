@@ -41,6 +41,7 @@ Set-Service -Status Stopped -StartupType Disabled -Name XboxNetApiSvc
 
 #Enable needed services
 Set-Service -Status Running -StartupType Automatic -Name RpcSs
+Set-Service -Status Running -StartupType Automatic -Name BFE
 Set-Service -Status Running -StartupType Automatic -Name BDESVC
 Set-Service -Status Running -StartupType Automatic -Name CryptSvc
 Set-Service -Status Running -StartupType Automatic -Name WEPHOSTSVC
