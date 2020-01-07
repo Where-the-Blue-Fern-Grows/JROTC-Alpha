@@ -45,6 +45,7 @@ Set-Service -Status Running -StartupType Automatic -Name BDESVC
 Set-Service -Status Running -StartupType Automatic -Name CryptSvc
 Set-Service -Status Running -StartupType Automatic -Name WEPHOSTSVC
 Set-Service -Status Running -StartupType Automatic -Name Dhcp
+Set-Service -Status Running -StartupType Automatic -Name nsi
 Set-Service -Status Running -StartupType Automatic -Name Dnscache
 Set-Service -Status Running -StartupType Automatic -Name Group
 Set-Service -Status Running -StartupType Automatic -Name Power
