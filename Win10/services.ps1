@@ -21,7 +21,6 @@ Set-Service -Status Stopped -StartupType Disabled -Name TermService
 Set-Service -Status Stopped -StartupType Disabled -Name UmRdpService
 Set-Service -Status Stopped -StartupType Disabled -Name vmicrdv
 Set-Service -Status Stopped -StartupType Disabled -Name RpcLocator
-Set-Service -Status Stopped -StartupType Disabled -Name RpcSs
 Set-Service -Status Stopped -StartupType Disabled -Name RemoteRegistry
 Set-Service -Status Stopped -StartupType Disabled -Name RemoteAccess
 Set-Service -Status Stopped -StartupType Disabled -Name SNMPTRAP
@@ -41,6 +40,7 @@ Set-Service -Status Stopped -StartupType Disabled -Name XboxGipSvc
 Set-Service -Status Stopped -StartupType Disabled -Name XboxNetApiSvc
 
 #Enable needed services
+Set-Service -Status Running -StartupType Automatic -Name RpcSs
 Set-Service -Status Running -StartupType Automatic -Name BDESVC
 Set-Service -Status Running -StartupType Automatic -Name CryptSvc
 Set-Service -Status Running -StartupType Automatic -Name WEPHOSTSVC
