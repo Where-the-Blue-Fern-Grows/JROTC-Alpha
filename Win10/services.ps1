@@ -27,7 +27,6 @@ Set-Service -Status Stopped -StartupType Disabled -Name SNMPTRAP
 Set-Service -Status Stopped -StartupType Disabled -Name SSDPSRV
 Set-Service -Status Stopped -StartupType Disabled -Name upnphost
 Set-Service -Status Stopped -StartupType Disabled -Name WerSvc
-Set-Service -Status Stopped -StartupType Disabled -Name Wecsvc
 Set-Service -Status Stopped -StartupType Disabled -Name WMPNetworkSvc
 Set-Service -Status Stopped -StartupType Disabled -Name icssvc
 Set-Service -Status Stopped -StartupType Disabled -Name WpnService
@@ -61,3 +60,4 @@ Set-Service -Status Running -StartupType Automatic -Name MpsSvc
 Set-Service -Status Running -StartupType Automatic -Name wuauserv
 Set-Service -Status Running -StartupType Automatic -Name LanmanServer
 Set-Service -Status Running -StartupType Automatic -Name EventLog
+Set-Service -Status Running -StartupType Automatic -Name Wecsvc
