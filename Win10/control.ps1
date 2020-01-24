@@ -35,10 +35,10 @@ Remove-Printer -Name *
 
 
 #Security and Maintenance
-
+#.bat for JROTC-Alpha/Win10/Registry/InternetExplorer.reg file, but changed for HKU\S-1-5-21-XXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXX\Software\Microsoft\Windows\CurrentVersion\Security and Maintenace (automate somehow)
 
 #Speech Recognition
-
+#.bat for JROTC-Alpha/Win10/Registry/InternetExplorer.reg file, but changed for HKU\S-1-5-21-XXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXX\Software\Microsoft\Windows\CurrentVersion\Run\Speech Recognition (automate somehow)
 
 #Internet Explorer Options
 #.bat for JROTC-Alpha/Win10/Registry/InternetExplorer.reg file, but changed for HKU\S-1-5-21-XXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXX\Software\Microsoft\Internet Explorer (automate somehow)
