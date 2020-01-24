@@ -30,3 +30,5 @@ Remove-Printer -Name *
 
 #Internet Explorer Options
 #.bat for JROTC-Alpha/Win10/Registry/InternetExplorer.reg file, but changed for HKU\S-1-5-21-XXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXX\Software\Microsoft\Internet Explorer (automate somehow)
+
+#cmd line: wmic useraccount get name,sid
