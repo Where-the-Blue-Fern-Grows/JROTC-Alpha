@@ -8,7 +8,7 @@ Remove-Printer -Name *
 #.bat for JROTC-Alpha/Win10/Registry/Explorer.reg file, but changed for HKU\S-1-5-21-XXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXX\Software\Microsoft\Windows\CurrentVersion\Explorer (automate somehow)
 
 #Infrared
-
+#.bat for JROTC-Alpha/Win10/Registry/Explorer.reg file, but changed for HKU\S-1-5-21-XXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXX\Control Panel\Infrared (automate somehow)
 
 #Language
 #.bat for JROTC-Alpha/Win10/Registry/InputPersonalization.reg file, but changed for HKU\S-1-5-21-XXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXX\Software\Microsoft\InputPersonalization (automate somehow)
