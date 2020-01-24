@@ -39,3 +39,5 @@ Remove-Printer -Name *
 
 #Speech Recognition
 
+#Internet Explorer Options
+#.bat for JROTC-Alpha/Win10/Registry/AutoPlay.reg file, but changed for HKU\S-1-5-21-XXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXX\Software\Microsoft\Internet Explorer (automate somehow)
