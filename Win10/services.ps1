@@ -58,6 +58,15 @@ Set-Service -Status Stopped -StartupType Disabled -Name UwfServcingSvc
 Set-Service -Status Stopped -StartupType Disabled -Name TabletInputService
 Set-Service -Status Stopped -StartupType Disabled -Name TapiSrv
 Set-Service -Status Stopped -StartupType Disabled -Name WiaRpc
+Set-Service -Status Stopped -StartupType Disabled -Name SharedRealitySvc
+Set-Service -Status Stopped -StartupType Disabled -Name SNMP
+Set-Service -Status Stopped -StartupType Disabled -Name SCPolicySvc
+Set-Service -Status Stopped -StartupType Disabled -Name ScDeviceEnum
+Set-Service -Status Stopped -StartupType Disabled -Name simptcp
+Set-Service -Status Stopped -StartupType Disabled -Name ShellHWDetection
+Set-Service -Status Stopped -StartupType Disabled -Name shpamsvc
+Set-Service -Status Stopped -StartupType Disabled -Name SensorService
+Set-Service -Status Stopped -StartupType Disabled -Name SensrSvc
 
 
 #Enable needed services
@@ -104,6 +113,8 @@ Set-Service -Status Running -StartupType Automatic -Name SystemEventsBroker
 Set-Service -Status Running -StartupType Automatic -Name SENS
 Set-Service -Status Running -StartupType Automatic -Name OneSyncSvc_*
 Set-Service -Status Running -StartupType Automatic -Name SysMain
+Set-Service -Status Running -StartupType Automatic -Name sppsvc
+Set-Service -Status Running -StartupType Automatic -Name wscsvc
 
 
 
