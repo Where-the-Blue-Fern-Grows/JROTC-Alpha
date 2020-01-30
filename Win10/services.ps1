@@ -67,6 +67,14 @@ Set-Service -Status Stopped -StartupType Disabled -Name ShellHWDetection
 Set-Service -Status Stopped -StartupType Disabled -Name shpamsvc
 Set-Service -Status Stopped -StartupType Disabled -Name SensorService
 Set-Service -Status Stopped -StartupType Disabled -Name SensrSvc
+Set-Service -Status Stopped -StartupType Disabled -Name SensorDataService
+Set-Service -Status Stopped -StartupType Disabled -Name SstpSvc
+Set-Service -Status Stopped -StartupType Disabled -Name iprip
+Set-Service -Status Stopped -StartupType Disabled -Name RetailDemo
+Set-Service -Status Stopped -StartupType Disabled -Name RasMan
+Set-Service -Status Stopped -StartupType Disabled -Name RmSvc
+Set-Service -Status Stopped -StartupType Disabled -Name PrintNotify
+Set-Service -Status Stopped -StartupType Disabled -Name WpcMonSvc
 
 #Enable needed services
 Set-Service -Status Running -StartupType Automatic -Name BDESVC
@@ -114,6 +122,9 @@ Set-Service -Status Running -StartupType Automatic -Name OneSyncSvc_*
 Set-Service -Status Running -StartupType Automatic -Name SysMain
 Set-Service -Status Running -StartupType Automatic -Name sppsvc
 Set-Service -Status Running -StartupType Automatic -Name wscsvc
+Set-Service -Status Running -StartupType Automatic -Name PcaSvc
+Set-Service -Status Running -StartupType Automatic -Name Spooler
+Set-Service -Status Running -StartupType Automatic -Name WPDBusEnum
 
 #Manual services
 Set-Service -StartupType Manual -Name dot3svc
@@ -133,3 +144,8 @@ Set-Service -StartupType Manual -Name TieringEngineService
 Set-Service -StartupType Manual -Name StorSvc
 Set-Service -StartupType Manual -Name StateRepository
 Set-Service -StartupType Manual -Name svsvc
+Set-Service -StartupType Manual -Name seclogon
+Set-Service -StartupType Manual -Name QWAVE
+Set-Service -StartupType Manual -Name PrintWorkflowUserSvc_*
+Set-Service -StartupType Manual -Name pla
+Set-Service -StartupType Manual -Name PerfHost
