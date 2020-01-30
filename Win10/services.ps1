@@ -68,7 +68,6 @@ Set-Service -Status Stopped -StartupType Disabled -Name shpamsvc
 Set-Service -Status Stopped -StartupType Disabled -Name SensorService
 Set-Service -Status Stopped -StartupType Disabled -Name SensrSvc
 
-
 #Enable needed services
 Set-Service -Status Running -StartupType Automatic -Name BDESVC
 Set-Service -Status Running -StartupType Automatic -Name BFE
@@ -115,9 +114,6 @@ Set-Service -Status Running -StartupType Automatic -Name OneSyncSvc_*
 Set-Service -Status Running -StartupType Automatic -Name SysMain
 Set-Service -Status Running -StartupType Automatic -Name sppsvc
 Set-Service -Status Running -StartupType Automatic -Name wscsvc
-
-
-
 
 #Manual services
 Set-Service -StartupType Manual -Name dot3svc
