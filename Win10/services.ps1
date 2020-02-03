@@ -75,6 +75,41 @@ Set-Service -Status Stopped -StartupType Disabled -Name RasMan
 Set-Service -Status Stopped -StartupType Disabled -Name RmSvc
 Set-Service -Status Stopped -StartupType Disabled -Name PrintNotify
 Set-Service -Status Stopped -StartupType Disabled -Name WpcMonSvc
+Set-Service -Status Stopped -StartupType Disabled -Name SEMgrSvc
+Set-Service -Status Stopped -StartupType Disabled -Name CscService
+Set-Service -Status Stopped -StartupType Disabled -Name NcaSVC
+Set-Service -Status Stopped -StartupType Disabled -Name NcbService
+Set-Service -Status Stopped -StartupType Disabled -Name NcdAutoSetup
+Set-Service -Status Stopped -StartupType Disabled -Name Netlogon
+Set-Service -Status Stopped -StartupType Disabled -Name NetTcpPortSharing
+Set-Service -Status Stopped -StartupType Disabled -Name NetTcpActivator
+Set-Service -Status Stopped -StartupType Disabled -Name NetMsmqActivator
+Set-Service -Status Stopped -StartupType Disabled -Name Wms
+Set-Service -Status Stopped -StartupType Disabled -Name WmsRepair
+Set-Service -Status Stopped -StartupType Disabled -Name SmsRouter
+Set-Service -Status Stopped -StartupType Disabled -Name MsKeyboardFilter
+Set-Service -Status Stopped -StartupType Disabled -Name ftpsvc
+Set-Service -Status Stopped -StartupType Disabled -Name AppVClient
+Set-Service -Status Stopped -StartupType Disabled -Name wlidsvc
+Set-Service -Status Stopped -StartupType Disabled -Name diagnosticshub.standardcollector.service
+Set-Service -Status Stopped -StartupType Disabled -Name MSMQTriggers
+Set-Service -Status Stopped -StartupType Disabled -Name MSMQ
+Set-Service -Status Stopped -StartupType Disabled -Name LxssManager
+Set-Service -Status Stopped -StartupType Disabled -Name LPDSVC
+Set-Service -Status Stopped -StartupType Disabled -Name lpxlatCfgSvc
+Set-Service -Status Stopped -StartupType Disabled -Name iphlpsvc
+Set-Service -Status Stopped -StartupType Disabled -Name IISADMIN
+Set-Service -Status Stopped -StartupType Disabled -Name vmicvss
+Set-Service -Status Stopped -StartupType Disabled -Name vmms
+Set-Service -Status Stopped -StartupType Disabled -Name vmictimesync
+Set-Service -Status Stopped -StartupType Disabled -Name vmicrdv
+Set-Service -Status Stopped -StartupType Disabled -Name vmicmsession
+Set-Service -Status Stopped -StartupType Disabled -Name vmcompute
+Set-Service -Status Stopped -StartupType Disabled -Name vmicheartbeat
+Set-Service -Status Stopped -StartupType Disabled -Name vmicshutdown
+Set-Service -Status Stopped -StartupType Disabled -Name vmicguestinterface
+Set-Service -Status Stopped -StartupType Disabled -Name vmickvpexchange
+Set-Service -Status Stopped -StartupType Disabled -Name HvHost
 
 #Enable needed services
 Set-Service -Status Running -StartupType Automatic -Name BDESVC
@@ -125,6 +160,9 @@ Set-Service -Status Running -StartupType Automatic -Name wscsvc
 Set-Service -Status Running -StartupType Automatic -Name PcaSvc
 Set-Service -Status Running -StartupType Automatic -Name Spooler
 Set-Service -Status Running -StartupType Automatic -Name WPDBusEnum
+Set-Service -Status Running -StartupType Automatic -Name ssh-agent
+Set-Service -Status Running -StartupType Automatic -Name NlaSvc
+Set-Service -Status Running -StartupType Automatic -Name LSM
 
 #Manual services
 Set-Service -StartupType Manual -Name dot3svc
@@ -149,3 +187,18 @@ Set-Service -StartupType Manual -Name QWAVE
 Set-Service -StartupType Manual -Name PrintWorkflowUserSvc_*
 Set-Service -StartupType Manual -Name pla
 Set-Service -StartupType Manual -Name PerfHost
+Set-Service -StartupType Manual -Name defragsvc
+Set-Service -StartupType Manual -Name NetSetupSvc
+Set-Service -StartupType Manual -Name netprofm
+Set-Service -StartupType Manual -Name Netman
+Set-Service -StartupType Manual -Name InstallService
+Set-Service -StartupType Manual -Name smphost
+Set-Service -StartupType Manual -Name sqprv
+Set-Service -StartupType Manual -Name NgcCtnrSvc
+Set-Service -StartupType Manual -Name NgcSvc
+Set-Service -StartupType Manual -Name MessagingService_*
+Set-Service -StartupType Manual -Name wlpasvc
+Set-Service -StartupType Manual -Name KtmRm
+Set-Service -StartupType Manual -Name UI0Detect
+Set-Service -StartupType Manual -Name PolicyAgent
+Set-Service -StartupType Manual -Name IKEEXT
