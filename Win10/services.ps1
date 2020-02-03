@@ -110,6 +110,24 @@ Set-Service -Status Stopped -StartupType Disabled -Name vmicshutdown
 Set-Service -Status Stopped -StartupType Disabled -Name vmicguestinterface
 Set-Service -Status Stopped -StartupType Disabled -Name vmickvpexchange
 Set-Service -Status Stopped -StartupType Disabled -Name HvHost
+Set-Service -Status Stopped -StartupType Disabled -Name EapHost
+Set-Service -Status Stopped -StartupType Disabled -Name dmwappushsvc
+Set-Service -Status Stopped -StartupType Disabled -Name TrkWks
+Set-Service -Status Stopped -StartupType Disabled -Name WdiSystemHost
+Set-Service -Status Stopped -StartupType Disabled -Name WdiServiceHost
+Set-Service -Status Stopped -StartupType Disabled -Name diagsvc
+Set-Service -Status Stopped -StartupType Disabled -Name DiagTrack
+Set-Service -Status Stopped -StartupType Disabled -Name NfsClnt
+Set-Service -Status Stopped -StartupType Disabled -Name CertPropSvc
+Set-Service -Status Stopped -StartupType Disabled -Name CaptureService_*
+Set-Service -Status Stopped -StartupType Disabled -Name camsvc
+Set-Service -Status Stopped -StartupType Disabled -Name PeerDistSvc
+Set-Service -Status Stopped -StartupType Disabled -Name BluetoothUserService_*
+Set-Service -Status Stopped -StartupType Disabled -Name BTAGService
+Set-Service -Status Stopped -StartupType Disabled -Name BthAvctpSvc
+Set-Service -Status Stopped -StartupType Disabled -Name tzautoupdate
+Set-Service -Status Stopped -StartupType Disabled -Name ALG
+Set-Service -Status Stopped -StartupType Disabled -Name AJRouter
 
 #Enable needed services
 Set-Service -Status Running -StartupType Automatic -Name BDESVC
@@ -163,6 +181,19 @@ Set-Service -Status Running -StartupType Automatic -Name WPDBusEnum
 Set-Service -Status Running -StartupType Automatic -Name ssh-agent
 Set-Service -Status Running -StartupType Automatic -Name NlaSvc
 Set-Service -Status Running -StartupType Automatic -Name LSM
+Set-Service -Status Running -StartupType Automatic -Name gpsvc
+Set-Service -Status Running -StartupType Automatic -Name EFS
+Set-Service -Status Running -StartupType Automatic -Name DPS
+Set-Service -Status Running -StartupType Automatic -Name DoSvc
+Set-Service -Status Running -StartupType Automatic -Name DcomLaunch
+Set-Service -Status Running -StartupType Automatic -Name DusmSvc
+Set-Service -Status Running -StartupType Automatic -Name CoreMessagingRegistrar
+Set-Service -Status Running -StartupType Automatic -Name CDPUserSvc_*
+Set-Service -Status Running -StartupType Automatic -Name CDPSvc
+Set-Service -Status Running -StartupType Automatic -Name EventSystem
+Set-Service -Status Running -StartupType Automatic -Name BrokerInfrastructure
+Set-Service -Status Running -StartupType Automatic -Name BITS
+Set-Service -Status Running -StartupType Automatic -Name AppHostSvc
 
 #Manual services
 Set-Service -StartupType Manual -Name dot3svc
@@ -202,3 +233,40 @@ Set-Service -StartupType Manual -Name KtmRm
 Set-Service -StartupType Manual -Name UI0Detect
 Set-Service -StartupType Manual -Name PolicyAgent
 Set-Service -StartupType Manual -Name IKEEXT
+Set-Service -StartupType Manual -Name hidserv
+Set-Service -StartupType Manual -Name hns
+Set-Service -StartupType Manual -Name GraphicsPerfSvc
+Set-Service -StartupType Manual -Name GraphicsPerfSvc
+Set-Service -StartupType Manual -Name FDResPub
+Set-Service -StartupType Manual -Name fdPHost
+Set-Service -StartupType Manual -Name fhsvc
+Set-Service -StartupType Manual -Name EntAppSvc
+Set-Service -StartupType Manual -Name embeddedmode
+Set-Service -StartupType Manual -Name DsRoleSvc
+Set-Service -StartupType Manual -Name MSDTC
+Set-Service -StartupType Manual -Name DevQueryBroker
+Set-Service -StartupType Manual -Name DevicesFlowUserSvc_*
+Set-Service -StartupType Manual -Name DevicePickerUserSvc_*
+Set-Service -StartupType Manual -Name DsmSVC
+Set-Service -StartupType Manual -Name DmEnrollmentSvc
+Set-Service -StartupType Manual -Name DeviceInstall
+Set-Service -StartupType Manual -Name DsSvc
+Set-Service -StartupType Manual -Name COMSysApp
+Set-Service -StartupType Manual -Name KeyIso
+Set-Service -StartupType Manual -Name ClipSVC
+Set-Service -StartupType Manual -Name c2wts
+Set-Service -StartupType Manual -Name wbegine
+Set-Service -StartupType Manual -Name aspnet_state
+Set-Service -StartupType Manual -Name AssignedAccessManagerSvc
+Set-Service -StartupType Manual -Name AppXSVC
+Set-Service -StartupType Manual -Name AppMgmt
+Set-Service -StartupType Manual -Name Appinfo
+Set-Service -StartupType Manual -Name AppIDSvc
+Set-Service -StartupType Manual -Name AppReadiness
+Set-Service -StartupType Manual -Name AxInstSV
+
+#cannot be disabled but unwanted
+Set-Service -Status Stopped -StartupType Manual -Name BcastDVRUserService_*
+Set-Service -Status Stopped -StartupType Manual -Name DeviceAssociationService
+Set-Service -Status Stopped -StartupType Manual -Name VaultSvc
+Set-Service -Status Stopped -StartupType Manual -Name PimIndexMaintenanceSvc_*
