@@ -13,4 +13,4 @@ Windows/S0216 and Windows/Win10
 These folders are also for general configuration, but for files that may differ because of the different needs of a server and a workstation.
 
 Windows/controlproj
-Work in progress folder, but will eventually have .regs and scripts to be able to automate the configuration of Control Panel items.
+Work in progress folder, but will eventually be able to automate the configuration of Control Panel items with Windows/control.ps1
