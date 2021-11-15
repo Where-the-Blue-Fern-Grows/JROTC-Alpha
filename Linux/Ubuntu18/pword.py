@@ -1,21 +1,7 @@
-users = []
-print("Enter name of users (Type \"Done\" when done):")
-while True:
-                newuser = input("")
-                if newuser == "Done":
-                                print(users)
-                                r=input("Is this right? [y/n]\n")
-                                if r == "y":
-                                                break
-                else:
-                                users.append(newuser)
-mp=input("Enter a master password:\n")
-f = open("script.txt", "w")
-f.write("")
-f.close()
-for x in users:
-                cmd=("echo -e \"%s\\n%s\" | sudo passwd %s\n") % (mp, mp, x)
-                f = open("script.txt", "a")
-                f.write(cmd)
-                f.close()
-                
+#Run as root
+#Loop through /etc/passwd
+#Create set of usernames, excluding ones with no shell (/usr/sbin/nologin, /bin/false, /bin/sync)
+#Discard "whoami" output from set
+#Loop through set, creating a password with the template "JROTC$$cp18alpha"+username
+#Echo each user:password into chpasswd
+
