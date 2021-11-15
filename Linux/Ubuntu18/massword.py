@@ -56,7 +56,7 @@ while True: #Change the prefix from the default if need be
 	else: print("Invalid input.\n")
 for user in users: users[user] = password_prefix+user
 
-subprocess.run(['mkdir','/usr/share/massword'],stderr=subprocess.DEVNULL)
+subprocess.run(['mkdir','/usr/share/massword'],stderr=subprocess.DEVNULL) #Send stderr to /dev/null to ignore errors because this may not be the 1st time running the script
 with open("/usr/share/massword/prefix","w") as file: file.write(password_prefix) #Create a new folder in /usr/share and save the prefix inside of it, in case of a lockout and the prefix has been forgotten
 print("Prefix saved to /usr/share/massword/prefix.\n")
 
