@@ -1,3 +1,5 @@
+#Edited in nano. Will not work in IDLE.
+
 import subprocess
 
 password_prefix = "JROTC$$cp18alpha"
@@ -56,12 +58,15 @@ while True:
 	else: print("Invalid input.\n")
 
 for user in users: users[user] = password_prefix+user
+subprocess.run(['mkdir','/usr/share/massword'],stderr=subprocess.DEVNULL)
+with open("/usr/share/massword/prefix","w") as file: file.write(password_prefix)
+print("Prefix saved to /usr/share/massword/prefix.\n")
 
 print("\nChanging passwords...\n")
 
 for user in users:
 	echo = subprocess.run(['echo',user+':'+users[user]],capture_output=True)
-	print("Changing "+user+"'s password...")
+	print("Changing "+user+"'s password to "+users[user]+"...")
 	chpasswdcmd = subprocess.run('chpasswd',input=echo.stdout)
 	if chpasswdcmd.returncode != 0:
 		print("Something went wrong lol. Exiting...")
