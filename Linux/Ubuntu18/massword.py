@@ -25,7 +25,7 @@ for user in output:
 			users[username] = password_prefix+username
 
 def users_subject():
-	print("Users selected for password change:", ', '.join(users.keys())+"\n")
+	print("\nUsers selected for password change:", ', '.join(users.keys()))
 
 while True: #Prompt to remove the main user
 	users_subject()
