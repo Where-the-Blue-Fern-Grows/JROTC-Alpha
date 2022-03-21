@@ -2,7 +2,7 @@
 
 import subprocess
 
-password_prefix = "JROTC$$cp18alpha"
+password_prefix = "CYPAT$$sec23alpha"
 
 currentUser = subprocess.run(['whoami'],capture_output=True,text=True).stdout.rstrip() 
 if currentUser != "root": #Check if script is being run with root privileges
