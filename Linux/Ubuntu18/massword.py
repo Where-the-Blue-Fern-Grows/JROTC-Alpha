@@ -71,4 +71,4 @@ for user in users: #Change the passwords 1 by 1 with chpasswd
 		exit()
 	elif chpasswdcmd.returncode == 0: print("Success.")
 
-print("\nAll passwords changed. Have a great day!\n")
+print("\nAll passwords changed. Have a great day! Free Hong Kong.\n")
